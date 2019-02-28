@@ -9,8 +9,8 @@ function getBooks(req, res) {
 	let query = Book.find({});
 	query.exec((err, books) => {
 		if(err) res.send(err);
-		//If no errors, send them back to the client
-		res.json(books);
+            //If no errors, send them back to the client
+    		res.json(books);
 	});
 }
 
@@ -21,12 +21,12 @@ function postBook(req, res) {
 	//Creates a new book
 	var newBook = new Book(req.body);
 	//Save it into the DB.
-	newBook.save((err,book) => {
+	newBook.save((err, book) => {
 		if(err) {
 			res.send(err);
 		}
 		else { //If no errors, send it back to the client
-			res.json({message: "Book successfully added!", book });
+    		res.json({message: "Book successfully added!", book });
 		}
 	});
 }
@@ -37,8 +37,8 @@ function postBook(req, res) {
 function getBook(req, res) {
 	Book.findById(req.params.id, (err, book) => {
 		if(err) res.send(err);
-		//If no errors, send it back to the client
-		res.json(book);
+            //If no errors, send it back to the client
+    		res.json(book);
 	});		
 }
 
@@ -57,12 +57,20 @@ function deleteBook(req, res) {
 function updateBook(req, res) {
 	Book.findById({_id: req.params.id}, (err, book) => {
 		if(err) res.send(err);
-		Object.assign(book, req.body).save((err, book) => {
+		
+        Object.assign(book, req.body).save((err, book) => {
 			if(err) res.send(err);
-			res.json({ message: 'Book updated!', book });
+			else res.json({ message: 'Book updated!', book });
 		});	
 	});
 }
 
 //export all the functions
-module.exports = { getBooks, postBook, getBook, deleteBook, updateBook };
+module.exports = { 
+    getBooks, 
+    postBook, 
+    getBook, 
+    deleteBook, 
+    updateBook
+};
+
