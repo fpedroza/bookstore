@@ -18,6 +18,9 @@
     "mocha": "2.*",
     "util": "*"
   },
+  "peerDependencies": {
+    "mongodb": "^3.1.13"
+  },
   "scripts": {
     "start": "NODE_ENV=dev node server.js",
     "test": "mocha --timeout 10000"
