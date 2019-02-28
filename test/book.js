@@ -15,11 +15,12 @@ chai.use(chaiHttp);
 
 //Our parent block
 describe('Books', () => {
-	beforeEach((done) => { //Before each test we empty the database
-		Book.remove({}, (err) => { 
-		   done();		   
-		});		
-	});
+    beforeEach((done) => { //Before each test we empty the database
+        Book.deleteMany({}, (err) => {
+           done();
+        });
+    });
+    
  /*
   * Test the /GET route
   */

@@ -8,10 +8,7 @@ let port = 8080;
 let book = require('./app/routes/book');
 let config = require('config'); //we load the db location from the JSON files
 //db options
-let options = { 
-				server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }, 
-                replset: { socketOptions: { keepAlive: 1, connectTimeoutMS : 30000 } } 
-              }; 
+let options = { useNewUrlParser: true }; 
 
 //db connection      
 mongoose.connect(config.DBHost, options);

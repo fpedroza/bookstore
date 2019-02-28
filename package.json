@@ -6,19 +6,20 @@
   "author": "Sam",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.1",
-    "config": "^1.20.1",
-    "express": "^4.13.4",
-    "mongoose": "^4.4.15",
-    "morgan": "^1.7.0"
+    "body-parser": "1.*",
+    "config": "1.*",
+    "express": "4.*",
+    "mongoose": "5.*",
+    "morgan": "1.*"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-http": "^2.0.1",
-    "mocha": "^2.4.5"
+    "chai": "3.*",
+    "chai-http": "2.*",
+    "mocha": "2.*",
+    "util": "*"
   },
   "scripts": {
-    "start": "SET NODE_ENV=dev && node server.js",
+    "start": "NODE_ENV=dev node server.js",
     "test": "mocha --timeout 10000"
   }
 }
