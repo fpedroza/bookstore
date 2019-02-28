@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "82002d37-381b-46cd-a2a6-c95c494cc3f2",
+		"name": "Bookstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/book/5c76ea3e274cc27685f0f74d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"5c76ea3e274cc27685f0f74d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/book/5c76ea3e274cc27685f0f74d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"5c76ea3e274cc27685f0f74d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "The Hobbit",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "J.R.R. Tolkien",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1954",
+							"type": "text"
+						},
+						{
+							"key": "pages",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/book",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "post book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "The Hobbit",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "J.R.R. Tolkien",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "1954",
+									"type": "text"
+								},
+								{
+									"key": "pages",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/book",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-rFNtpD/fW2O5lNgM6Mym1bxjEOo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Feb 2019 19:47:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book successfully added!\",\n    \"book\": {\n        \"_id\": \"5c76e94e274cc27685f0f74c\",\n        \"title\": \"The Hobbit\",\n        \"author\": \"J.R.R. Tolkien\",\n        \"year\": 1954,\n        \"pages\": 1234,\n        \"createdAt\": \"2019-02-27T19:47:26.851Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update book",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "The Lord of the Rings",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "J.R.R. Tolkien",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1960",
+							"type": "text"
+						},
+						{
+							"key": "pages",
+							"value": "1335",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/book/5c76ea3e274cc27685f0f74d",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"book",
+						"5c76ea3e274cc27685f0f74d"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "post book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "The Hobbit",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "J.R.R. Tolkien",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "1954",
+									"type": "text"
+								},
+								{
+									"key": "pages",
+									"value": "1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/book",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bf-rFNtpD/fW2O5lNgM6Mym1bxjEOo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Feb 2019 19:47:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book successfully added!\",\n    \"book\": {\n        \"_id\": \"5c76e94e274cc27685f0f74c\",\n        \"title\": \"The Hobbit\",\n        \"author\": \"J.R.R. Tolkien\",\n        \"year\": 1954,\n        \"pages\": 1234,\n        \"createdAt\": \"2019-02-27T19:47:26.851Z\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
